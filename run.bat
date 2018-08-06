@@ -1,1 +1,1 @@
-C:\Automation\Katalon_Studio_Windows_64-5.5\katalon.exe -runMode=console -projectPath="D:\Jenkins\KatalonAutomationTest\workspace\KL1.prj" -retry=0 -testSuitePath="D:\Jenkins\KatalonAutomationTest\workspace\Test Suites/TestSuiteKL" -browserType="Chrome"
+C:\Automation\Katalon_Studio_Windows_64-5.5\katalon.exe -runMode=console -projectPath="*\master\KL1.prj" -retry=0 -testSuitePath="Test Suites/TestSuiteKL" -browserType="Chrome"
