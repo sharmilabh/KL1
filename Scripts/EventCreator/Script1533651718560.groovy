@@ -19,13 +19,19 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKe
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser('')
+WebUI.waitForPageLoad(1000)
 
-WebUI.navigateToUrl('https://test-develop.efsys.net/ltauto1/backend/home/login.htm')
+CustomKeywords.'library.MenuNavigator.selectMenuItem'('Plus')
 
-WebUI.setText(findTestObject('Login/input_txtUsername'), 'auto_report@zzz.zzz')
+WebUI.waitForPageLoad(1000, FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('Login/input_txtPassword'), 'efsysauto')
+CustomKeywords.'library.MenuNavigator.selectMenuItem'('NewEvent')
 
-WebUI.click(findTestObject('Login/button_signin'))
+WebUI.setText(findTestObject('EventProperties/input_event-name'), 'Katalon 3')
+
+WebUI.setText(findTestObject('EventProperties/input_event-start-date-time'), '06/08/2018 09:00')
+
+WebUI.setText(findTestObject('EventProperties/input_event-end-date-time'), '06/08/2018 17:30')
+
+WebUI.click(findTestObject('EventProperties/button_Save'))
 
